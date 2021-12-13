@@ -1,7 +1,8 @@
-package com.suho.demo.firebaseauth
+package com.suho.demo.firebaseauth.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.suho.demo.firebaseauth.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
