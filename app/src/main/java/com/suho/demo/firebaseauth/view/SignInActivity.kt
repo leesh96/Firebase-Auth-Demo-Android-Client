@@ -55,6 +55,7 @@ class SignInActivity : AppCompatActivity() {
             .requestIdToken(getString(R.string.web_client_id))
             .requestEmail()
             .build()
+
         firebaseAuth = Firebase.auth
 
         binding.btnGoogleSignIn.setOnClickListener {
@@ -87,9 +88,9 @@ class SignInActivity : AppCompatActivity() {
 
                     currentUser?.let {
                         it.getIdToken(true)
-                            .addOnCompleteListener() { getIdTask ->
-                                if (getIdTask.isSuccessful) {
-                                    val firebaseIdToken = getIdTask.result.token ?: ""
+                            .addOnCompleteListener() { task ->
+                                if (task.isSuccessful) {
+                                    val firebaseIdToken = task.result.token ?: ""
                                     Log.d(TAG, "Firebase ID Token: $firebaseIdToken")
                                     MyApplication.prefs.setString(TOKEN_KEY, firebaseIdToken)
                                     viewModel.signIn()

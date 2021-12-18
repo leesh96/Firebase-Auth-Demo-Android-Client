@@ -14,7 +14,8 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.FirebaseAuthDemo">
         <activity
-            android:name=".view.SignInActivity"
+            android:name=".view.LaunchActivity"
+            android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.SignInActivity" />
     </application>
 
 </manifest>

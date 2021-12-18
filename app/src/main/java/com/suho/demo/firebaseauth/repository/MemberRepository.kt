@@ -7,4 +7,6 @@ object MemberRepository {
     private val apiService = RemoteDataSource.apiService
 
     suspend fun signIn() = apiService.signIn()
+    suspend fun login() = apiService.login()
+    suspend fun withdraw() = apiService.withdraw()
 }
