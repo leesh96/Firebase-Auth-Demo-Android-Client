@@ -36,3 +36,9 @@ API 요청 헤더에 발급받은 JWT를 넣어 요청을 보낸다.
 
 만약, 401 코드를 응답 받으며 idToken이 만료되었을 가능성이 높으므로 재발급을 Interceptor에서 처리
 
+Interceptor는 HTTP 요청도 중간에서 보내기 전에 처리가능하고 응답도 처리가능하다.
+
+여러 개의 Interceptor, OkHttpClient, Retrofit을 잘 사용하여 상황에 맞게 요청 보낼 수 있음 -> DI를 사용하면 효과적임
+
+
+
